@@ -23,7 +23,7 @@ const Register =() => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-300">
       <h2 className="text-2xl font-bold text-black mb-6">Register with Us</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-300 p-6 rounded-lg shadow-lg w-70">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-300 p-6 rounded-lg shadow-lg w-90">
         <input {...register("fullName")} placeholder="Full Name" className="w-full p-2 mb-2 border rounded"/>
 
 
@@ -33,3 +33,5 @@ const Register =() => {
     </div>
   )
 }
+
+export default Register;
