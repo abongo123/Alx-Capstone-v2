@@ -5,6 +5,7 @@ import Resources from "../components/Resources";
 import BookSession from "../components/BookSession";
 import ChatSupport from "../components/ChatSupport";
 import PrivateDiary from "../components/PrivateDiary";
+import Register from "..pages/Register"
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,9 @@ const AppRoutes = () => {
         <Route path="/book-session" element={<BookSession />} />
         <Route path="/chat-support" element={<ChatSupport />} />
         <Route path="/private-diary" element={<PrivateDiary />} />
+        <Route path="Register" pages={<Register/>} />
+
+
       </Routes>
     </Router>
   );
