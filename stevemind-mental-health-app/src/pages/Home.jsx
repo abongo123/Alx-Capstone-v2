@@ -18,7 +18,7 @@ const Home =() => {
           Register
         </motion.button>
         </Link>
-        <Link to="/Register">
+        <Link to="/Login">
         <motion.button className='bg-gray-500 text-black w-64 py-9 rounded-lg hover:bg-green-400 mt-11 font-mono text-center font-bold flex-row' whileHover={{scale: 1.00}}>
           Login
         </motion.button>
