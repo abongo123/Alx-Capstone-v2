@@ -6,6 +6,7 @@ import BookSession from "../components/BookSession";
 import ChatSupport from "../components/ChatSupport";
 import PrivateDiary from "../components/PrivateDiary";
 import Register from "./pages/Register"
+import Login from "../pages/Login";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path="/chat-support" element={<ChatSupport />} />
         <Route path="/private-diary" element={<PrivateDiary />} />
         <Route path="register" element={<Register/>} />
+        <Route path="login" element={<Login/>} />
 
 
       </Routes>

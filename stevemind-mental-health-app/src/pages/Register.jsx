@@ -39,10 +39,7 @@ const Register =() => {
         Already have an account? <Link to="/login" className="text-blue-500">Login</Link>
       </p>
 
-
-
       </form>
-
 
     </div>
   )
