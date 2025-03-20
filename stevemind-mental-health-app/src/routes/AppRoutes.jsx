@@ -7,6 +7,7 @@ import ChatSupport from "../components/ChatSupport";
 import PrivateDiary from "../components/PrivateDiary";
 import Register from "./pages/Register"
 import Login from "../pages/Login";
+import { Sidebar } from "lucide-react";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,8 @@ const AppRoutes = () => {
         <Route path="/private-diary" element={<PrivateDiary />} />
         <Route path="register" element={<Register/>} />
         <Route path="login" element={<Login/>} />
+        <Route path="sidebar" element={<Sidebar/>} />
+
 
 
       </Routes>
