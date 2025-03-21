@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import { Home, Calendar, MessageSquare, Book, LogOut } from "lucide-react";
+import { Home, Calendar, MessageSquare, Book, LogOut, Notebook } from "lucide-react";
 
 const Sidebar = () => {
 
     return (
-        <div className="w-64 bg-white shadow-lg min-h-screen p-4"><h2 className="text-3xl font-bold text-blue-800 mb-6">Mental Health</h2>
+        <div className="w-64 bg-white shadow-lg min-h-screen p-4"><h2 className="text-3xl font-bold text-blue-800 mb-6">Serenity Hub</h2>
 
         <nav>
             <Link to="/dashboard" className="flex items-center p-3 text-black hover:bg-gray-200 rounded">
@@ -24,12 +24,12 @@ const Sidebar = () => {
             </Link>
 
             <Link to="/private-dairy" className="flex items-center p-3 text-black hover:bg-gray-200 rounded"> 
-            Private Diary
+            <Notebook className="mr-2"/> Private Diary
             </Link>
 
-            <Link to="/logout" className="flex items-center p-3 text-black hover:bg-gray-200 rounded mt-6">
-            <Logout className="mr-2" /> Logout
-            </Link>
+            <Link to="/logout" className="flex items-center p-3 text-red-500 hover:bg-slate-500 rounded mt-6">
+          <LogOut className="mr-2" /> Logout
+           </Link>
         </nav>
         </div>
     )
