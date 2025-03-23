@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Login from './pages/Login';
 import Dashboard from './components/Dashboard';
 import { Sidebar } from 'lucide-react';
+import Resources from './components/Resources';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} /> 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </Router>
   );

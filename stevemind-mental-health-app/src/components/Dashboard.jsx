@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { auth } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import Sidebar from "../components/Sidebar";
+import { Link } from "react-router-dom"
 
 const Dashboard = () => {
   const navigate =useNavigate()
@@ -23,6 +24,7 @@ const Dashboard = () => {
         <div className="bg-white p-4 rounded-lg shadow h-[200px]">
         <h2 className="text-xl font-semibold text-black">Mental Health Resources</h2>
         <p className="text-gray-500 mt-2">Access Information on Mental Health</p>
+        <Link to="/resources" className="text-blue-500 hover:underline"></Link>
         </div>
         <div className="bg-white p-4 rounded-lg shadow h-[200px]">
         <h2 className="text-xl font-semibold text-black">Book Session</h2>

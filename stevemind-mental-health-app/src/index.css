@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.resource-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .resource-card:hover {
+    transform: scale(1.05);
+  }
