@@ -22,9 +22,6 @@ const AppRoutes = () => {
         <Route path="register" element={<Register/>} />
         <Route path="login" element={<Login/>} />
         <Route path="sidebar" element={<Sidebar/>} />
-
-
-
       </Routes>
     </Router>
   );
