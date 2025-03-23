@@ -40,9 +40,9 @@ const BookSession =() => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-green-300 p-5">
+    <div className="flex items-center justify-center min-h-screen bg-blue-400 p-5">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-5 text-center">Book a Session</h2>
+        <h2 className="text-2xl font-bold mb-5 text-center">Book a Session with us</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           {!formData.anonymous && (
             <div>
@@ -68,7 +68,7 @@ const BookSession =() => {
               <input type="checkbox" name="anonymous" checked={formData.anonymous} onChange={handleChange} className="mr-2"></input>
               <label>Book as Anonymous</label>
             </div>
-            <button type="submit" className="w-full bg-green-400 text-white p-2 rounded hover:bg-green-600">Book Session</button>
+            <button type="submit" className="w-full bg-green-700 text-white p-2 rounded hover:bg-blue-600">Book Session</button>
 
         </form>
       </div>
