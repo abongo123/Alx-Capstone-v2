@@ -29,6 +29,7 @@ const Dashboard = () => {
         <div className="bg-white p-4 rounded-lg shadow h-[200px]">
         <h2 className="text-xl font-semibold text-black">Book Session</h2>
         <p className="text-gray-500 mt-2">Schedule an appointment</p>
+        <Link to="/book-session" className="text-blue-500 hover:underline"></Link>
         </div>
 
         <div className="bg-white p-4 rounded-lg shadow h-[200px]">
