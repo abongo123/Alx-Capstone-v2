@@ -40,6 +40,18 @@ const specialists = [
     specialty: "Behavioral Therapists",
     image: "https://via.placeholder.com/150",
   },
+  {
+    id: 7,
+    name: "Dr. Jack . A.O",
+    specialty: "Behavioral Therapists",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    id: 8,
+    name: "Dr. Jake M. T",
+    specialty: "Behavioral Therapists",
+    image: "https://via.placeholder.com/150",
+  },
 ];
 
 const BookSession = () => {
