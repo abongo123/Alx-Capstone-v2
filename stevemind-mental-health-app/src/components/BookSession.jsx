@@ -6,19 +6,19 @@ import { time } from "framer-motion"
 const specialists = [
   {
     id: 1,
-    name: "Dr. Jane Mwangi",
+    name: "Dr. Mary Almadrones",
     specialty: "Psychologist",
     image: "https://via.placeholder.com/150",
   },
   {
     id: 2,
-    name: "Dr. Robert Namanje",
+    name: "Dr. Imran Khan",
     specialty: "Psychologist",
     image: "https://via.placeholder.com/150",
   },
   {
     id: 3,
-    name: "Dr. Mercy Mwangangi",
+    name: "Dr. Jesphine Kompoong",
     specialty: "Therapists",
     image: "https://via.placeholder.com/150",
   },

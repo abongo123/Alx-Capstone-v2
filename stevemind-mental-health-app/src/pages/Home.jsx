@@ -18,12 +18,12 @@ const Home =() => {
 
       <div className='flex flex-col gap-4 items-center'>
         <Link to="/Register">
-        <motion.button className='text-black w-64 py-9 rounded-lg hover:bg-teal-500 mt-11 font-mono text-center font-bold' whileHover={{scale: 1.00}}>
+        <motion.button className='text-black w-64 py-9 rounded-lg hover:bg-teal-200 mt-10  text-center font-bold' whileHover={{scale: 1.00}}>
           Register
         </motion.button>
         </Link>
         <Link to="/Login">
-        <motion.button className='text-black w-64 py-9 rounded-lg hover:bg-green-400 mt-11 font-mono text-center font-bold flex-row' whileHover={{scale: 1.00}}>
+        <motion.button className='text-black w-64 py-9 rounded-lg hover:bg-green-200 mt-10  text-center font-bold flex-row' whileHover={{scale: 1.00}}>
           Login
         </motion.button>
         </Link>

@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import { Sidebar } from 'lucide-react';
 import Resources from './components/Resources';
 import BookSession from './components/BookSession';
+import ChatSupport from './components/ChatSupport';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/book-session" element={<BookSession />} />
+        <Route path="/chat-support" element={<ChatSupport />} />
       </Routes>
     </Router>
   );
