@@ -1,12 +1,11 @@
-// src/components/ChatSupport.jsx
 import React, { useState, useEffect } from "react";
 import { db, auth } from "../firebaseConfig";
 import {collection,addDoc,onSnapshot,query,orderBy,serverTimestamp} from "firebase/firestore";
 
 const ChatSupport = () => {
-  const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState([]);
-  const [user, setUser] = useState(null);
+    const [message, setMessage] = useState ("")
+    const [messages, setMessages] = useState ([])
+    const [user, setUser] = useState(null)
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
@@ -59,14 +58,14 @@ const ChatSupport = () => {
     }
   };
 
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-5">
+        return(
+            <div className="flex items-center justify-center min-h-screen bg-gray-100 p-5">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-center">Chat Support</h2>
 
-        <div className="h-64 overflow-y-auto border border-gray-300 p-3 rounded mb-4 bg-gray-50">
+        <div className="h-10 overflow-y-auto border border-gray-300 p-3 rounded mb-4 bg-gray-50">
           {messages.length === 0 ? (
-            <p className="text-gray-500">No messages yet. Start chatting!</p>
+            <p className="text-gray-500">Talk to Us!</p>
           ) : (
             messages.map((msg) => (
               <div
@@ -107,5 +106,4 @@ const ChatSupport = () => {
     </div>
   );
 };
-
 export default ChatSupport;
