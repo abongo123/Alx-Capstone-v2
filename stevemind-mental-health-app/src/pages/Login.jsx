@@ -19,9 +19,10 @@ const Login =() =>{
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-400">
-      <h2 className="text-3xl font-bold text-black mb-5">Login to your Account</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-green-200 p-6 rounded-lg shadow-lg w-80">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-10 px-10 rounded-lg shadow-lg w-80 min-h-[450px] flex flex-col justify-between">
+      <h1 className="text-center text-xl font-bold mb-6 pb-4 border-b-2 border-gray-300 px-10">Serenity Hub</h1>
+      <h3 className="text-center">Sign In</h3>
         <input {...register("email")} placeholder="Email" className="w-full p-2 mb-2 border rounded"/>
         <p className="text-red-600">{errors.email?.message}</p>
 

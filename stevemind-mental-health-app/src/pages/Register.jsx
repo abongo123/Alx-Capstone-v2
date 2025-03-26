@@ -21,9 +21,10 @@ const Register =() => {
 
   return(
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-300">
-      <h2 className="text-2xl font-bold text-black mb-6">Register with Us</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-slate-300 p-6 rounded-lg shadow-lg w-80">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-9 px-12 rounded-lg shadow-lg w-80 flex flex-col justify-between">
+      <h1 className="text-center text-xl font-bold mb-10 b-8 border-b-2 border-gray-300 px-10">Serenity Hub</h1>
+      <h3 className="text-center px-8 mt-4 p-2 py-3">Create Account</h3>
         <input {...register("fullName")} placeholder="Input Your Full Name" className="w-full p-2 mb-2 border rounded"/>
         <p className="text-red-500">{errors.fullName?.message}</p>
 
