@@ -8,6 +8,7 @@ import { Sidebar } from 'lucide-react';
 import Resources from './components/Resources';
 import BookSession from './components/BookSession';
 import ChatSupport from './components/ChatSupport';
+import PrivateDiary from './components/PrivateDiary';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/book-session" element={<BookSession />} />
         <Route path="/chat-support" element={<ChatSupport />} />
+        <Route path="/private-dairy" element={<PrivateDiary />} />
       </Routes>
     </Router>
   );
