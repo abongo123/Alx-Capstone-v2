@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import {useForm} from "react-hook-form"
 import *as yup from "yup"
 import { Link } from "react-router-dom"
+import { createUserWithEmailAndPassword } from "firebase/auth"
 
 
 const schema = yup.object() .shape({
@@ -15,8 +16,19 @@ const Register =() => {
     resolver: yupResolver(schema)
   })
 
-  const onSubmit =(data) => {
-    console.log("Congrats! You've been Registered", data)
+
+  const navigate = useNavigate()
+
+  const onSubmit = async (data) => {
+
+    try {
+      await createUserWithEmailAndPassword(auth, data.email, data.password)
+      alert("Registration Successful, Please proceed to login")
+      navigate("/login")
+    } catch (error) {
+      console.error("Registration Error", error.message)
+      alert("Registration Failed! Try again.")
+    }
   }
 
   return(
