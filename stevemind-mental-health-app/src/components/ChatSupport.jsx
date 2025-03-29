@@ -72,34 +72,18 @@ const ChatSupport = () => {
                                     msg.userId === user?.uid
                                         ? "bg-green-100 text-right"
                                         : "bg-gray-200 text-left"
-                                }`}
-                            >
+                                }`}>
                                 <p className="text-sm font-semibold">{msg.userName}</p>
                                 <p className="text-gray-700">{msg.message}</p>
-                                <p className="text-xs text-gray-400">
-                                    {msg.createdAt?.toDate
-                                        ? new Date(msg.createdAt.toDate()).toLocaleString()
-                                        : "Just now"}
-                                </p>
+                                <p className="text-xs text-gray-400"> {msg.createdAt?.toDate ? new Date(msg.createdAt.toDate()).toLocaleString(): "Just now"}</p>
                             </div>
                         ))
                     )}
-                </div>
+                    </div>
 
-                <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    rows="3"
-                    className="w-full p-2 border rounded mb-2"
-                    placeholder="Type your message..."
-                ></textarea>
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows="3" className="w-full p-2 border rounded mb-2" placeholder="Type your message..."></textarea>
 
-                <button
-                    onClick={handleSend}
-                    className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
-                >
-                    Send
-                </button>
+               <button onClick={handleSend} className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">Send</button>
             </div>
         </div>
     )
