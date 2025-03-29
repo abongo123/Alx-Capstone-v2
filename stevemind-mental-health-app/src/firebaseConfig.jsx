@@ -1,8 +1,9 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { applyActionCode, getAuth } from "firebase/auth";
+import { applyActionCode, getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDVO421L8os1sBQ8be970Bzgc3-3i2p_18",

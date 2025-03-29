@@ -2,7 +2,11 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import {useForm} from "react-hook-form"
 import *as yup from "yup"
 import { Link } from "react-router-dom"
-import { createUserWithEmailAndPassword } from "firebase/auth"
+import {useNavigate } from "react-router-dom";
+import { getAuth,createUserWithEmailAndPassword } from "firebase/auth"
+
+
+const auth = getAuth()
 
 
 const schema = yup.object() .shape({
@@ -43,7 +47,7 @@ const Register =() => {
         <input {...register("email")} placeholder="Input Your Email" className="w-full p-2 mb-2 border rounded mt-8"/>
         <p className="text-red-600">{errors.email?.message}</p>
 
-        <input {...register("password")} placeholder="Set Your Password" className="w-full p-2 mb-2 border rounded mt-8"/>
+        <input {...register("password")} type="password" placeholder="Set Your Password" className="w-full p-2 mb-2 border rounded mt-8"/>
         <p className="text-red-700">{errors.password?.message}</p>
 
         <button type="submit" className="bg-green-400 text-red-500 px-4 py-2 rounded w-full mt-2 font-bold">Register</button>
