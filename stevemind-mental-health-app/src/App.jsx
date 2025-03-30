@@ -10,6 +10,8 @@ import Resources from './components/Resources';
 import BookSession from './components/BookSession';
 import ChatSupport from './components/ChatSupport';
 import PrivateDiary from './components/PrivateDiary';
+import PrivateRoute from "./components/PrivateRoute";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} /> 
         <Route path="/register" element={<Register />} /> 
         <Route path="/login" element={<Login />} /> 
+        <Route path="/dashboard" element={<PrivateRoute />}/>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/resources" element={<Resources />} />
