@@ -2,6 +2,10 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import {useForm} from "react-hook-form"
 import *as yup from "yup"
 import { data, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase"; 
+
 
 const schema =yup.object().shape({
   email: yup.string().email("Input valid Email").required("Input Your Email"),
@@ -13,8 +17,19 @@ const Login =() =>{
     resolver: yupResolver(schema),
   })
 
-  const onSubmit =(data) => {
-    console.log("User Logged In", data)
+  const navigate =useNavigate()
+
+  const onSubmit = async (data) => {
+    try{
+      await signInWithEmailAndPassword(auth,data.email, data.password)
+      console.log("User Logged In", data)
+      alert("Successfully Login! Redirecting to Dashboard...")
+      navigate("/dashboard")
+    } catch (error) {
+      console.error("Login Error", error.message)
+      alert("Login Unsuccessful! Check your credentials")
+    }
+    
   }
 
   return (
