@@ -4,6 +4,7 @@ import *as yup from "yup"
 import { Link } from "react-router-dom"
 import {useNavigate } from "react-router-dom";
 import { getAuth,createUserWithEmailAndPassword } from "firebase/auth"
+import { useAuth } from "../context/AuthContext"
 
 
 const auth = getAuth()
