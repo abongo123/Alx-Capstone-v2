@@ -104,7 +104,7 @@ const BookSession = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-300 p-6">
+    <div className="min-h-screen bg-gray-400 p-6">
       <h1 className="text-2xl font-bold text-center text-black mb-6">
         Book a Session with a Specialist
       </h1>
@@ -182,10 +182,7 @@ const BookSession = () => {
                 <label>Book as Anonymous</label>
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-green-700 text-white p-2 rounded hover:bg-blue-600"
-              >
+              <button type="submit" className="w-full bg-green-400 text-white p-2 rounded hover:bg-lime-600">
                 Book Session
               </button>
             </form>
