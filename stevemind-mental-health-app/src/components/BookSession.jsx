@@ -8,19 +8,19 @@ const specialists = [
     id: 1,
     name: "Dr. Mary Almadrones",
     specialty: "Psychologist",
-    image: "https://via.placeholder.com/150",
+    image: "https://images.app.goo.gl/buQqJpjdiov8Eevc6",
   },
   {
     id: 2,
     name: "Dr. Imran Khan",
     specialty: "Psychologist",
-    image: "https://via.placeholder.com/150",
+    image: "/Images/Profile1.jpg",
   },
   {
     id: 3,
     name: "Dr. Jesphine Kompoong",
     specialty: "Therapists",
-    image: "https://via.placeholder.com/150",
+    image: "/Images/Profile2.jpg",
   },
   {
     id: 4,

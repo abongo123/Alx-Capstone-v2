@@ -27,7 +27,7 @@ const Login =() =>{
       navigate("/dashboard")
     } catch (error) {
       console.error("Login Error", error.message)
-      alert("Login Unsuccessful! Check your credentials")
+      alert(`Login Failed: ${error.code} - ${error.message}`)
     }
     
   }
