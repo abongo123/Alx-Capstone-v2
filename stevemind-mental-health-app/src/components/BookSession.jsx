@@ -14,11 +14,11 @@ const specialists = [
     id: 2,
     name: "Dr. Imran Khan",
     specialty: "Psychologist",
-    image: "/Images/Profile1.jpg",
+    image: "/images/Profile1.jpg"
   },
   {
     id: 3,
-    name: "Dr. Jesphine Kompoong",
+    name: "Dr. Josphine Kompoong",
     specialty: "Therapists",
     image: "/Images/Profile2.jpg",
   },
