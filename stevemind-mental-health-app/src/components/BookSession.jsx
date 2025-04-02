@@ -8,7 +8,7 @@ const specialists = [
     id: 1,
     name: "Dr. Mary Almadrones",
     specialty: "Psychologist",
-    image: "https://images.app.goo.gl/buQqJpjdiov8Eevc6",
+    image: "/images/Profile1.jpg"
   },
   {
     id: 2,
