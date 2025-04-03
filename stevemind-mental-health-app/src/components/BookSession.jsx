@@ -104,7 +104,7 @@ const BookSession = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-400 p-6">
+    <div className="min-h-screen bg-blue-400 p-6">
       <h1 className="text-2xl font-bold text-center text-black mb-6">
         Book a Session with a Specialist
       </h1>
