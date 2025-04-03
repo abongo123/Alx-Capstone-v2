@@ -33,10 +33,12 @@ const Login =() =>{
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-400">
-
+    <div className="relative w-screen h-screen flex bg-blue-400">
+      <div className="relative z-10 w-full flex justify-center items-center">
       <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-10 px-10 rounded-lg shadow-lg w-80 min-h-[450px] flex flex-col justify-between">
-      <h1 className="text-center text-xl font-bold mb-6 pb-4 border-b-2 border-gray-300 px-10">Serenity Hub</h1>
+        <div className="flex justify-center mb-7 w-full pb-5 border-b-2 border-gray-700">
+        <img src="Images/salford.jpg" alt="logo" className="w-24 h-20 object-contain"></img>
+        </div>
       <h3 className="text-center">Sign In</h3>
         <input {...register("email")} placeholder="Email" className="w-full p-2 mb-2 border rounded"/>
         <p className="text-red-600">{errors.email?.message}</p>
@@ -46,13 +48,8 @@ const Login =() =>{
 
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded w-full mt-2">Login</button>
 
-        <p className="mt-3">Don't have an account? <Link to="/register" className="text-red-500">Register</Link></p>
-
-
-      </form>
-
-
-
+        <p className="mt-3">Don't have an account? <Link to="/register" className="text-red-500">Register</Link></p></form>
+        </div>
     </div>
   )
 }
