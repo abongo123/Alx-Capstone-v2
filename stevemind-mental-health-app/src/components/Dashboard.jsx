@@ -3,8 +3,7 @@ import { auth } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
-
-console.log("Dashboard component is rendering");
+import { Home, Calendar, MessageSquare, Book, LogOut, Notebook } from "lucide-react";
 
 const Dashboard = () => {
   const navigate =useNavigate()
@@ -23,14 +22,17 @@ const Dashboard = () => {
       </div>
 <div className="flex flex-col gap-4 items-center">
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg lg:grid-cols-4 gap-4">
-        <div className="bg-white p-4 rounded-lg shadow h-[200px]">
-        <h2 className="text-xl font-semibold text-black">Mental Health Resources</h2>
-        <p className="text-gray-500 mt-2">Access Information on Mental Health</p>
-        <Link to="/resources" className="text-blue-500 hover:underline"></Link>
+        <div className="bg-white p-4 rounded-lg shadow h-full">
+        <Link to="/resources" className="flex flex-col items-center p-3 text-black hover:bg-gray-200 rounded font-bold">
+            <Book className="mt-2" />Resources
+            </Link>
+        <p className="text-gray-500 mt-4">Access Information on Mental Health</p>
         </div>
         <div className="bg-white p-4 rounded-lg shadow h-[200px]">
-        <h2 className="text-xl font-semibold text-black">Book Session</h2>
-        <p className="text-gray-500 mt-2">Schedule an appointment</p>
+        <Link to="/book-session" className="flex flex-col items-center p-3 text-black hover:bg-gray-200 rounded font-semibold">
+            <Calendar className="mr-2" /> Book Session
+            </Link>
+        <p className="text-gray-500 mt-4">Schedule an appointment</p>
         <Link to="/book-session" className="text-blue-500 hover:underline"></Link>
         </div>
 
