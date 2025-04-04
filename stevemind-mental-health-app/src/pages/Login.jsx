@@ -35,7 +35,7 @@ const Login =() =>{
   return (
     <div className="relative w-screen h-screen flex bg-blue-400">
       <div className="relative z-10 w-full flex justify-center items-center">
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-10 px-10 rounded-lg shadow-lg w-80 min-h-[450px] flex flex-col justify-between">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-12 px-11 rounded-lg shadow-lg w-80 min-h-[450px] flex flex-col justify-between">
         <div className="flex justify-center mb-7 w-full pb-5 border-b-2 border-gray-700">
         <img src="Images/salford.jpg" alt="logo" className="w-24 h-20 object-contain"></img>
         </div>

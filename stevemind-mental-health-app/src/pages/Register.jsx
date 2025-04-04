@@ -37,10 +37,12 @@ const Register =() => {
   }
 
   return(
-    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-300">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-400">
 
       <form onSubmit={handleSubmit(onSubmit)} className="bg-white py-9 px-12 rounded-lg shadow-lg w-80 flex flex-col justify-between">
-      <h1 className="text-center text-xl font-bold mb-10 b-8 border-b-2 border-gray-300 px-10">Serenity Hub</h1>
+      <div className="flex justify-center mb-7 w-full pb-5 border-b-2 border-gray-700">
+        <img src="Images/salford.jpg" alt="logo" className="w-24 h-20 object-contain"></img>
+        </div>
       <h3 className="text-center px-8 mt-4 p-2 py-3">Create Account</h3>
         <input {...register("fullName")} placeholder="Full Name" className="w-full p-2 mb-2 border rounded"/>
         <p className="text-red-500">{errors.fullName?.message}</p>
