@@ -4,6 +4,8 @@ import { signOut } from "firebase/auth";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
 
+console.log("Dashboard component is rendering");
+
 const Dashboard = () => {
   const navigate =useNavigate()
 
