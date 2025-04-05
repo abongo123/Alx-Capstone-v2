@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react"
 import { db, auth } from "../firebaseConfig"
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "firebase/firestore"
+import Footer from "../pages/Footer"
 
 const ChatSupport = () => {
     const [message, setMessage] = useState ("")
@@ -85,6 +86,7 @@ const ChatSupport = () => {
 
                <button onClick={handleSend} className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">Send</button>
             </div>
+            
         </div>
     )
 }

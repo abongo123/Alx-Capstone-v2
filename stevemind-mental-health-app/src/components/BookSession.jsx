@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { db } from "../firebaseConfig"
 import { collection, addDoc, Timestamp } from "firebase/firestore"
 import { time } from "framer-motion"
+import Footer from "../pages/Footer"
 
 const specialists = [
   {
@@ -104,11 +105,10 @@ const BookSession = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-400 p-6">
-      <h1 className="text-2xl font-bold text-center text-black mb-6">
-        Book a Session with a Specialist
-      </h1>
-
+    <div className=" bg-blue-400">
+      <div className="w-full border-b border-gray-400 bg-green-100 p-3">
+      <h1 className="text-2xl font-bold text-center text-black mb-6">Book a Session with a Specialist</h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
         {specialists.map((spec) => (
           <div key={spec.id} className="bg-white p-4 rounded-lg shadow-lg">
@@ -189,6 +189,7 @@ const BookSession = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
