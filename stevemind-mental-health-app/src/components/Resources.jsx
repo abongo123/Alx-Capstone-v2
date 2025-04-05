@@ -40,15 +40,10 @@ const Resources =() => {
       {resources.map((resource) => (
           <div
             key={resource.id}
-            className="bg-white p-5 rounded-lg shadow-md transition-transform transform hover:shadow-xl mt-6"
-          >
+            className="bg-gray-200 p-5 rounded-lg shadow-md transition-transform transform hover:shadow-xl mt-6">
             <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
             <p className="text-gray-600 mb-3">{resource.description}</p>
-            <a
-              href={resource.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline">Learn More</a>
+            <a href={resource.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Learn More</a>
           </div>
         ))}
       </div>

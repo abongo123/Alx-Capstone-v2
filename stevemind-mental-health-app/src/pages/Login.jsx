@@ -22,8 +22,6 @@ const Login =() =>{
   const onSubmit = async (data) => {
     try{
       await signInWithEmailAndPassword(auth,data.email, data.password)
-      console.log("User Logged In", data)
-      alert("Successfully Login! Redirecting to Dashboard...")
       navigate("/dashboard")
     } catch (error) {
       console.error("Login Error", error.message)
