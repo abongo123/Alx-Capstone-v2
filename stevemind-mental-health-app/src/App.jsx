@@ -11,6 +11,7 @@ import ChatSupport from './components/ChatSupport';
 import PrivateDiary from './components/PrivateDiary';
 import PrivateRoute from "./components/PrivateRoute";
 import Sidebar from './components/Sidebar';
+import Footer from './pages/Footer';
 
 
 
@@ -27,8 +28,7 @@ function App() {
         <Route path="/chat-support" element={<ChatSupport />} />
         <Route path="/private-dairy" element={<PrivateDiary />} />
         <Route path="/dashboard" element={<PrivateRoute element={<Dashboard />} />} />
-
-
+        <Route path="/footer" element={<Footer />} />
       </Routes>
     </Router>
   );

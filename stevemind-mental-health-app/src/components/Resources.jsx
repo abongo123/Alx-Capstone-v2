@@ -1,6 +1,7 @@
 import { title } from 'framer-motion/client'
 import { desc } from 'framer-motion/m'
 import React from 'react'
+import Footer from '../pages/Footer';
 
 const Resources =() => {
   const resources =[
@@ -51,6 +52,7 @@ const Resources =() => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
