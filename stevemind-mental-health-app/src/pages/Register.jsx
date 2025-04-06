@@ -5,6 +5,11 @@ import { Link } from "react-router-dom"
 import {useNavigate } from "react-router-dom";
 import { getAuth,createUserWithEmailAndPassword } from "firebase/auth"
 import { useAuth } from "../context/AuthContext"
+<<<<<<< HEAD
+=======
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
+>>>>>>> backup-branch
 
 
 const auth = getAuth()
@@ -21,6 +26,14 @@ const Register =() => {
     resolver: yupResolver(schema)
   })
 
+<<<<<<< HEAD
+=======
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prev) => !prev);
+  };
+
+>>>>>>> backup-branch
 
   const navigate = useNavigate()
 
@@ -50,10 +63,20 @@ const Register =() => {
         <input {...register("email")} placeholder="Your Email" className="w-full p-2 mb-2 border rounded mt-8"/>
         <p className="text-red-600">{errors.email?.message}</p>
 
+<<<<<<< HEAD
         <input {...register("password")} type="password" placeholder="Set Your Password" className="w-full p-2 mb-2 border rounded mt-8"/>
         <p className="text-red-700">{errors.password?.message}</p>
 
         <button type="submit" className="bg-green-400 text-white px-4 py-2 rounded w-full mt-2 font-bold">Register</button>
+=======
+        <div className="relative mt-5">
+        <input {...register("password")} type={passwordVisible ? "text": "password"} placeholder="Set Your Password" className="w-full p-2 mb-2 border rounded mt-8"/>
+        <span onClick={togglePasswordVisibility} className="absolute right-3 top-1/2 cursor-pointer">{passwordVisible ? <FaEyeSlash/> : <FaEye/>}</span>
+        <p className="text-red-700">{errors.password?.message}</p>
+        </div>
+
+        <button type="submit" className="bg-blue-400 text-white px-4 py-2 rounded w-full mt-2 font-bold">Register</button>
+>>>>>>> backup-branch
 
         <p className="mt-4">
         Already have an account? <Link to="/login" className="text-blue-500">Login</Link>

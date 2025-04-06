@@ -2,6 +2,10 @@ import { title } from 'framer-motion/client'
 import { desc } from 'framer-motion/m'
 import React from 'react'
 import Footer from '../pages/Footer';
+<<<<<<< HEAD
+=======
+import Sidebar from './Sidebar';
+>>>>>>> backup-branch
 
 const Resources =() => {
   const resources =[
@@ -40,6 +44,7 @@ const Resources =() => {
       {resources.map((resource) => (
           <div
             key={resource.id}
+<<<<<<< HEAD
             className="bg-white p-5 rounded-lg shadow-md transition-transform transform hover:shadow-xl mt-6"
           >
             <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
@@ -49,6 +54,12 @@ const Resources =() => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline">Learn More</a>
+=======
+            className="bg-gray-200 p-5 rounded-lg shadow-md transition-transform transform hover:shadow-xl mt-6">
+            <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
+            <p className="text-gray-600 mb-3">{resource.description}</p>
+            <a href={resource.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Learn More</a>
+>>>>>>> backup-branch
           </div>
         ))}
       </div>
