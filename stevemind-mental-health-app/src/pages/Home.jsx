@@ -7,7 +7,8 @@ const Home = () => {
   return (
     <div className='relative min-h-screen flex'>
       <div className='flex-1'>
-        <img src='Images/salford.jpg' alt='Background' className='h-full w-full object-cover' style={{maxHeight: '100vh'}}/>
+        <video autoPlay loop muted src='Images/salford.mp4' alt='Background video' className='h-full w-full object-cover' style={{maxHeight: '100vh'}}>
+        </video>
       </div>
 <div className='flex-2 bg-green-100 flex items-center justify-center'>
         <div className='relative z-10 flex flex-col gap-4 items-center' style={{maxHeight: '100vh'}}>
