@@ -5,6 +5,8 @@ import { data, Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 
 const schema =yup.object().shape({
@@ -29,6 +31,10 @@ const Login =() =>{
     }
     
   }
+  const [passwordVisible, setPasswordVisible] = useState(false);
+const togglePasswordVisibility = () => {
+  setPasswordVisible((prev) => !prev);
+};
 
   return (
     <div className="relative w-screen h-screen flex bg-blue-400">
@@ -41,7 +47,11 @@ const Login =() =>{
         <input {...register("email")} placeholder="Email" className="w-full p-2 mb-2 border rounded"/>
         <p className="text-red-600">{errors.email?.message}</p>
 
-        <input {...register("password")} placeholder="Password" className="w-full p-2 mb-2 border rounded mt-5"/>
+        <div className="relative mt-5">
+        <input {...register("password")} type={passwordVisible ? "text": "password"} placeholder="Password" className="w-full p-2 mb-2 border rounded mt-5">
+        </input>
+        <span onClick={togglePasswordVisibility} className="absolute right-3 top-1/2 cursor-pointer">{passwordVisible ? <FaEyeSlash/> : <FaEye/>}</span>
+        </div>
         <p className="text-red-600">{errors.password?.message}</p>
 
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded w-full mt-2">Login</button>
